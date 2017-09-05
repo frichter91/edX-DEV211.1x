@@ -1,3 +1,4 @@
+// Hands-On: Manipulating the DOM using jQuery
 $(document).ready(function () {
   manipulateDOM();
 });
@@ -12,4 +13,15 @@ function manipulateDOM() {
   
   var lastH3Headers = $('h3:last');
   lastH3Headers.css('background-color', '#53226A');
+}
+
+// Hands-On: Calling Web Services using jQuery
+function makeRequests() {
+    $.getJSON('http://httpbin.org/ip')
+        .done(function(response) {
+            alert(JSON.stringify(response));
+            $('body > p').text(
+                response.origin
+            );
+        });
 }
