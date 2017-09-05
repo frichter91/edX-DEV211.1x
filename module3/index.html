@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <title>JavaScript</title>
+  </head>
+  
+  <body>
+    
+    // Hands-On: Adding JavaScript to a HTML Page
+    <header id="headerItem">
+      Old Header
+    </header>
+    <section>
+      <button onclick = "clickHandler()" >Click me</button>
+    </section>
+    <script type="text/javascript">
+    
+      function startLogic() {
+        var newHtml = '<em>New Header</em>';
+        document.getElementById('headerItem').innerHTML = newHtml;
+      }
+      startLogic();
+      
+      function clickHandler() {
+        alert('You clicked me!');
+      }
+      
+      // Hands-On: Using JavaScript Files on a HTML Page
+      <header id="headerItem">
+        Old Header
+      </header>
+     <section>
+        <button onclick = "clickHandler()" >Click me</button>
+     </section>
+     <script type="text/javascript" src="js/script.js">
+      </script>
+  </body>
+</html>
